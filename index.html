@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chess</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <section class="board-col">
+    <div class="player" id="top-player"><span class="name"></span><span class="caps"></span></div>
+    <div class="board-wrap">
+      <div id="board" role="grid" aria-label="Chess board"></div>
+      <div class="promo hidden" id="promo"></div>
+    </div>
+    <div class="player" id="bottom-player"><span class="name"></span><span class="caps"></span></div>
+  </section>
+
+  <aside class="panel">
+    <h1>Chess</h1>
+    <div class="status" id="status" aria-live="polite">White to move</div>
+
+    <div class="controls">
+      <label>Mode
+        <select id="mode"><option value="ai">Vs computer</option><option value="pvp">Two players</option></select>
+      </label>
+      <label id="side-l">You play
+        <select id="side"><option value="w">White</option><option value="b">Black</option></select>
+      </label>
+      <label id="lvl-l">Level
+        <select id="level"><option value="1">Easy</option><option value="2" selected>Medium</option><option value="3">Hard</option></select>
+      </label>
+    </div>
+
+    <div class="buttons">
+      <button id="undo" class="btn">Undo move</button>
+      <button id="flip" class="btn ghost">Flip board</button>
+      <button id="new" class="btn accent">New game</button>
+    </div>
+
+    <h2>Moves</h2>
+    <ol id="moves" class="moves"></ol>
+  </aside>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
